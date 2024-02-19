@@ -21,7 +21,7 @@ else{
 
 // Create a db
 
-$sql ="CREATE DATABASE dbJuha5";
+$sql ="CREATE DATABASE dbAfsana";
 $result = mysqli_query($conn,$sql);
 
 // Check for the db creation success

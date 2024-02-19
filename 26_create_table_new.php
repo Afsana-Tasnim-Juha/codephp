@@ -6,7 +6,7 @@
 $servername ="localhost";
 $username ="root";
 $password ="";
-$database ="dbHarry";
+$database ="dbafsana";
 
 // Create a connection
 
@@ -22,7 +22,7 @@ else{
 
 // Create a table in the db
 
-$sql = "CREATE TABLE `phpjuha`.`mytable` (`sno` INT(11) NOT NULL , `name` VARCHAR(11) NOT NULL , `age` INT(11) NOT NULL , `gender` VARCHAR(11) NOT NULL )";
+$sql = "CREATE TABLE `phptrip` (`sno` INT(6) NOT NULL , `name` VARCHAR(12) NOT NULL , `dest` VARCHAR(6) NOT NULL , PRIMARY KEY (`sno`))";
 $result = mysqli_query($conn,$sql);
 
 // Check for the table creation success
@@ -33,8 +33,5 @@ if($result){
 else{
     echo "table was not created  successfully" . mysqli_error($conn);
 }
-
-
- 
  
  ?>
