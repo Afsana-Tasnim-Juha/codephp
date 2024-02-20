@@ -1,7 +1,5 @@
 <?php
 
-
-
 //connecting to the database
 $servername ="localhost";
 $username ="root";
@@ -20,18 +18,22 @@ else{
     echo "Connection was successful";
 }
 
-// Create a table in the db
+$name = "Suman";
+$destination ="Russia";
 
-$sql = "CREATE TABLE `phptrip` (`sno` INT(6) NOT NULL , `name` VARCHAR(12) NOT NULL , `dest` VARCHAR(6) NOT NULL , PRIMARY KEY (`sno`))";
+// Sql query to be executed
+
+$sql ="INSERT INTO `phptrip` ( `name`, `dest`) VALUES ( '$name', '$destination')";
 $result = mysqli_query($conn,$sql);
 
-// Check for the table creation success
+// Add a new trip to the trip table in the database
 
 if($result){
-     echo "The table was created successfully<br>";
+    echo "The record has been inserted successfully!<br>";
 }
 else{
-    echo "table was not created  successfully" . mysqli_error($conn);
+   echo "The record has not been inserted  successfully" . mysqli_error($conn);
 }
- 
- ?>
+
+
+?>
